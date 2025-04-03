@@ -4,125 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aakash | Applied AI Engineer & NLP Specialist</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-bg: #f9fafb;
+      --accent-bg: #111827;
+      --text-color: #111;
+      --subtext-color: #6b7280;
+      --accent-color: #2563eb;
+    }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9fafb;
-      color: #111;
-      animation: fadeIn 0.6s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      background: var(--primary-bg);
+      color: var(--text-color);
+      line-height: 1.6;
     }
     header {
-      background: #111827;
+      background: var(--accent-bg);
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      animation: fadeInDown 1s ease-out;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
     }
     header p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #d1d5db;
     }
-    section {
-      max-width: 900px;
+    main {
+      max-width: 960px;
       margin: auto;
       padding: 2rem;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 1s ease forwards;
-      animation-delay: 0.3s;
+    }
+    section {
+      margin-bottom: 3rem;
     }
     h2 {
-      color: #1f2937;
-      margin-top: 2rem;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    ul, p {
+      margin: 0 0 1rem 0;
+      padding-left: 1.2rem;
     }
     ul {
-      list-style: none;
-      padding-left: 0;
+      list-style-type: square;
     }
     li {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #e5e7eb;
-      color: #6b7280;
+      margin-bottom: 0.6rem;
     }
     a {
-      color: #2563eb;
+      color: var(--accent-color);
       text-decoration: none;
     }
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    a:hover {
+      text-decoration: underline;
     }
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer {
+      background: #e5e7eb;
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--subtext-color);
+    }
+    .resume-link {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .resume-link:hover {
+      background: #1e40af;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Aakash</h1>
-    <p>Applied AI Engineer | NLP & Simulation Systems | Educator</p>
+    <img src="image.jpg" 
+     alt="Aakash's photo" 
+     style="width: 200px; height: 200px; border-radius: 50%; margin-top: 1rem; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+    <h1>Aakash Singh</h1>
+    <p>Applied AI Engineer | NLP & LLM Systems | Educator </p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m an applied AI engineer focused on natural language processing, LLM systems, and educational technology. I transitioned from metallurgy to AI by building projects that solve real-world problems, particularly in learning and development.</p>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a curious and pragmatic engineer with a background in metallurgy and a strong pivot to Artificial Intelligence. My focus is on applied NLP, generative AI, and building tools that improve learning and development for individuals and organizations.</p>
+    </section>
 
-    <h2>Education</h2>
-    <ul>
-      <li><strong>IIT Bombay</strong> — B.Tech in Metallurgical Engineering (2017–2021)</li>
-      <li><strong>IIT Hyderabad</strong> — Professional Certification in AI (Distinction & Gold Medal)</li>
-    </ul>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>IIT Bombay</strong> — B.Tech in Metallurgical Engineering (2021)</li>
+        <li><strong>IIT Hyderabad</strong> — Professional Certification in Artificial Intelligence (Gold Medal, 2019)</li>
+      </ul>
+    </section>
 
-    <h2>Key Projects</h2>
-    <ul>
-      <li><strong>Sales Simulation Engine (Nytro.ai)</strong>: AI-driven prospect simulation using LLMs, GradSum-based prompt optimization, resulted in 14% faster rep ramp-up and 11% higher win rate.</li>
-      <li><strong>Feedback Matching System</strong>: Transformer-based similarity evaluator that automated trainer feedback and saved 625 hours. Used cosine similarity and contextual embeddings.</li>
-      <li><strong>Sign Language Detection</strong>: Built real-time classifier using VGG and Xception on 80K+ hand gesture images with 99.95% accuracy.</li>
-      <li><strong>Telegram Bot</strong>: NLP-powered Q&A bot for AI/CS students. Hosted with FastAPI on GCP with OpenAI integration for response generation and bio tagging.</li>
-      <li><strong>Weld Quality Prediction</strong>: Supervised ML model for acoustic weld signal classification (80% accuracy), applied in industrial NDT context.</li>
-    </ul>
+    <section>
+        <h2>Academic Interests</h2>
+        <p>My academic interests lie at the intersection of applied natural language processing, educational technology, and generative AI. I am particularly fascinated by how language models can be adapted and optimized to replicate nuanced human communication—especially in training and educational settings. I have explored topics such as prompt optimization, retrieval-augmented generation (RAG), semantic embeddings, and dialogue evaluation frameworks. I’m also interested in studying human-computer interaction patterns in AI-driven educational tools and simulation systems. My goal is to build systems that are not just intelligent but meaningfully helpful in the context of learning and development.</p>
+      </section>
 
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, HTML, JS (basic), SQL</li>
-      <li><strong>Frameworks:</strong> FastAPI, Streamlit, Flask</li>
-      <li><strong>AI/ML:</strong> PyTorch, TensorFlow, HuggingFace, GradSum, OpenAI, BERT, LLaMA</li>
-      <li><strong>DevOps:</strong> Docker, GCP, GitHub Actions</li>
-    </ul>
+    <section>
+      <h2>Professional Experience</h2>
+      <ul>
+        <li><strong>AI/NLP Engineer @ Nytro (acquired by MarketStar) (May 2022 – Dec 2024):</strong> Designed learning & development platform for clients such as GoogleCloud, Doordash and TikTok. Reduced ramp-up by 18% and increased pitch success by 40%.</li>
+        <li><strong>Content Manager @ Unacademy (2021 – 2022):</strong> Led education initiatives across K–12, generating 20M+ watch hours and decreasing churn by 46% via sentiment tracking.</li>
+      </ul>
+    </section>
 
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-      <li>GitHub: <a href="https://github.com/aakashs11">github.com/aakashs11</a></li>
-      <li>LinkedIn: <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Key Projects</h2>
+      <ul>
+        <li><strong>Sales Simulation Engine</strong> (Nytro.ai): Prompt-tuned LLM simulations trained on sales personas, improving onboarding effectiveness by 14%.</li>
+        <li><strong>AI Feedback Matching System</strong>: Used sentence embeddings and transformer-based scoring to automate training feedback (saved 625+ hours).</li>
+        <li><strong><a href="https://github.com/aakashs11/Gesture-recognization-Sign-Language-Interpretation" target="_blank">Sign Language Recognition</a></strong>: Built real-time gesture classifier using VGG/Xception on 80K images, achieving 99.95% accuracy.</li>
+        <li><strong><a href="https://github.com/aakashs11/telegram-bot-akask" target="_blank">RAG-based Telegram QA Bot</a></strong>: NLP chatbot with FastAPI + OpenAI + GCP. Extracts relevant answers via dense vector search.</li>
+        <li><strong>Weld Quality Prediction</strong>: Acoustic-based classifier (80% accuracy) for industrial weld diagnostics using decision trees.</li>
+      </ul>
+    </section>
+
+
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Python, HTML, JavaScript (basic), SQL</li>
+        <li><strong>Frameworks & Libraries:</strong> FastAPI, Streamlit, Flask, PyTorch, TensorFlow, HuggingFace, BERT, LLaMA, GradSum</li>
+        <li><strong>Tools & DevOps:</strong> Docker, GCP, GitHub Actions, VS Code, Postman</li>
+      </ul>
+    </section>
+
+    <section>
+      <a href="resume.pdf" target="_blank" class="resume-link">View My Resume (PDF)</a>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:aakashsingh1129@gmail.com">aakashsingh1129@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/aakashs11" target="_blank">github.com/aakashs11</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/aakash-singh-86475b41/" target="_blank">Aakash Singh</a></li>
+        <li>YouTube: <a href="https://www.youtube.com/@aakash.singh.11" target="_blank">@aakash.singh.11</a></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Aakash. Built with curiosity, code, and conversation.
