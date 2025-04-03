@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aakash | Applied AI Engineer & NLP Specialist</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -12,6 +12,11 @@
       padding: 0;
       background: #f9fafb;
       color: #111;
+      animation: fadeIn 0.6s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     header {
       background: #111827;
@@ -21,20 +26,26 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease-out;
     }
     header p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #d1d5db;
     }
     section {
       max-width: 900px;
       margin: auto;
       padding: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards;
+      animation-delay: 0.3s;
     }
     h2 {
       color: #1f2937;
       margin-top: 2rem;
+      font-size: 1.6rem;
     }
     ul {
       list-style: none;
@@ -42,6 +53,7 @@
     }
     li {
       margin-bottom: 1rem;
+      line-height: 1.6;
     }
     footer {
       text-align: center;
@@ -53,6 +65,22 @@
       color: #2563eb;
       text-decoration: none;
     }
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
@@ -63,7 +91,7 @@
 
   <section>
     <h2>About Me</h2>
-    <p>I’m an applied AI engineer with a deep interest in natural language processing, conversational agents, and educational technology. Formerly at Nytro.ai, I built evaluation and simulation systems for global sales readiness. I also run a YouTube channel teaching AI and CS to CBSE students (classes 10–12). My approach blends academic insight with real-world deployment and scalable feedback systems.</p>
+    <p>I’m an applied AI engineer focused on natural language processing, LLM systems, and educational technology. I transitioned from metallurgy to AI by building projects that solve real-world problems, particularly in learning and development.</p>
 
     <h2>Education</h2>
     <ul>
@@ -71,41 +99,33 @@
       <li><strong>IIT Hyderabad</strong> — Professional Certification in AI (Distinction & Gold Medal)</li>
     </ul>
 
-    <h2>Core Projects</h2>
+    <h2>Key Projects</h2>
     <ul>
-      <li><strong>Sales Simulation Engine</strong>: Built a goal-based dialogue agent using transformer models for simulating AI prospect behavior. Introduced prompt optimization techniques based on GradSum for automated prompt tuning. Resulted in 14% faster sales rep ramp-up time, with over 35,000 simulations conducted.</li>
-      <li><strong>AI Feedback Matching System</strong>: Designed a transformer-based mechanism for encoding trainer baselines and comparing rep pitches using cosine similarity and embedding alignment. Saved 625 trainer hours and led to measurable improvement in pitch accuracy.</li>
-      <li><strong>Sign Language Detection</strong>: Developed a real-time computer vision model using VGG and Xception architectures for 7 custom signs. Achieved 99.95% accuracy across 80,000 images, deployed using TensorFlow and transfer learning.</li>
-      <li><strong>Telegram NLP Bot</strong>: Built and deployed an NLP-powered FastAPI Telegram bot with query understanding and GCP hosting. Integrated document parsing and retrieval for educational Q&A workflows.</li>
-      <li><strong>Weld Quality Analysis via ML</strong>: Collaborated with Prof. Satish Vitta (IIT Bombay) to analyze arc sound signals for weld quality prediction. Created decision tree models (80% accuracy) and authored a 25-page report referencing industrial acoustic signature studies.</li>
+      <li><strong>Sales Simulation Engine (Nytro.ai)</strong>: AI-driven prospect simulation using LLMs, GradSum-based prompt optimization, resulted in 14% faster rep ramp-up and 11% higher win rate.</li>
+      <li><strong>Feedback Matching System</strong>: Transformer-based similarity evaluator that automated trainer feedback and saved 625 hours. Used cosine similarity and contextual embeddings.</li>
+      <li><strong>Sign Language Detection</strong>: Built real-time classifier using VGG and Xception on 80K+ hand gesture images with 99.95% accuracy.</li>
+      <li><strong>Telegram Bot</strong>: NLP-powered Q&A bot for AI/CS students. Hosted with FastAPI on GCP with OpenAI integration for response generation and bio tagging.</li>
+      <li><strong>Weld Quality Prediction</strong>: Supervised ML model for acoustic weld signal classification (80% accuracy), applied in industrial NDT context.</li>
     </ul>
 
-    <h2>Experience</h2>
+    <h2>Skills</h2>
     <ul>
-      <li><strong>AI Engineer – Nytro.ai</strong> (acquired by Marketstar): Led AI initiatives for sales coaching across clients like Google Cloud, Equinix, and DoorDash. Created simulation, feedback, and contextual scoring systems.</li>
-      <li><strong>Educator – YouTube Channel</strong>: Teach 10th–12th AI and CS (CBSE). Created 100+ videos, interactive live sessions, and concept explainers. Reached thousands of students across India.</li>
-      <li><strong>Freelance Mentor & Speaker</strong>: Conduct live coding, AI workshops, and mentorship on YouTube automation, career switching to AI, and GRE preparation.</li>
-    </ul>
-
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li><strong>Languages:</strong> Python, JavaScript, HTML/CSS, SQL</li>
-      <li><strong>AI/ML:</strong> PyTorch, TensorFlow, Transformers (HF), BERT, RAG, GradSum, LLaMA</li>
-      <li><strong>Backend & Infra:</strong> FastAPI, GCP, Docker, Streamlit, Git</li>
-      <li><strong>Prompt Engineering:</strong> Evaluation guardrails, persona design, simulation tuning</li>
+      <li><strong>Languages:</strong> Python, HTML, JS (basic), SQL</li>
+      <li><strong>Frameworks:</strong> FastAPI, Streamlit, Flask</li>
+      <li><strong>AI/ML:</strong> PyTorch, TensorFlow, HuggingFace, GradSum, OpenAI, BERT, LLaMA</li>
+      <li><strong>DevOps:</strong> Docker, GCP, GitHub Actions</li>
     </ul>
 
     <h2>Contact</h2>
     <ul>
       <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-      <li>GitHub: <a href="https://github.com/your-username">github.com/your-username</a></li>
+      <li>GitHub: <a href="https://github.com/aakashs11">github.com/aakashs11</a></li>
       <li>LinkedIn: <a href="https://linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
-      <li>YouTube: <a href="https://www.youtube.com/@yourchannel">youtube.com/@yourchannel</a></li>
     </ul>
   </section>
 
   <footer>
-    &copy; 2025 Aakash. Blending engineering, education, and NLP to build what matters.
+    &copy; 2025 Aakash. Built with curiosity, code, and conversation.
   </footer>
 </body>
 </html>
